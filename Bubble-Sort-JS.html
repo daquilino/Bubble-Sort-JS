@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<title>Bubble Sort</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+//Code to Test bubbleSort()	
+var array=[];
+
+for (var i = 0; i < 100; i++)
+{
+	array[i] = Math.floor(Math.random()*1000);	
+}
+
+console.log("pre-sort: " + array);
+
+bubbleSort(array);
+
+console.log("===========================");
+console.log("sorted: " + array);
+
+
+
+//==================== Bubble Sort Function =========
+
+
+function bubbleSort(anArray)
+{
+	for(var i = anArray.length-1; i > 0 ; i--)
+	{
+		for(var j = i-1; j >= 0 ; j--)
+		{
+	
+			if(anArray[j] > anArray[i])
+			{		
+				var temp = anArray[i];
+				anArray[i] = anArray[j]; 
+				anArray[j] = temp;				
+			}
+			
+		}//END for j
+		
+	}//END for i
+
+}//END bubbleSort
+
+
+</script>
+	
+</body>
+</html>
